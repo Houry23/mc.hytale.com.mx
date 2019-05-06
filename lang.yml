@@ -37,8 +37,8 @@ messages:
   alreadyuntradeable: '&4Personaje actualmente unido!'
   alreadytradeable: '&4Intercabio disponible!'
   alreadyunbound: '&4Actualmente Sin unir!'
-  madeuntradeable: '&2It is now character bound!'
-  madetradeable: '&2Ahora está disponible el comercio!'
+  madeuntradeable: '&2Ahora está enlazado al personaje!'
+  madetradeable: '&2Ahora está disponible para comercio!'
   madeunbound: '&2Ahora está sin unir!'
   noDrop: '&4Éste objeto no puede tirarse!'
   noStorage: '&4Éste objeto no puede almacenarse!'
@@ -48,13 +48,13 @@ save:
   failstackTitle: '&e-- Saved &9Advice of Valks&e %page% --'
   listing: '&e%NUMBER% &f- &c%FAILSTACK%'
 help:
-  help: '&aview help.'
+  help: '&aVer ayuda.'
   menu: '&aAbrir menú de mejora.'
   reload: '&aRecargar plugin.'
   version: '&aVerificar version.'
-  inventory: '&aVer elementos que ha recogido.'
+  inventory: '&aVer elementos que has recogido.'
   add: |-
-    &agive a player an enhancing items.
+    &adar a un jugador un elemento de mejora.
     0 = &6Black Stone (&3Weapon&6)&a, 1 = &6Black Stone (&7Armor&6)&a, 2 = &6Concentrated Magical Black Stone (&3Weapon&6)&a, 3 = &6Concentrated Magical Black Stone (&7Armor&6)
   debug: '&acollect debugging information for developer to fix issues.'
   item: '&aEditar un elemento en la mano.'
