@@ -1,0 +1,301 @@
+config:
+  pluginTag: '&7[&3Enchantments&cEnhance&7] '
+  checkingVersion: '&aYou are using EnchantmentsEnhance v%version%'
+  onEnable: Mejora de encantamiento Está Habilitado!
+  onDisable: Mejora de encantamiento Está Deshabilitado!
+  onLoadingInventory: Cargando informacion del jugador...
+  consoleCommand: Console no puede usar esto!
+  reloading: '&aReiniciando servidor..!'
+  reload: '&aMejora de encantamiento reiniciado!'
+  welcome: '&3Bienvenido, Aventurero &c%player%&3! Use &6/mejora ayuda&3 para ver guias de mejora!'
+  invalidCommand: '&cComando invalido! use &6/enhance Ayuda&c Para obtener ayuda!'
+  noPerm: '&a No''tienes permisos!'
+  playerNotFound: '&cJugador en linea no ubicado!'
+  invalidNumber: '&cNumero invalido!'
+  invalidItem: '&cObjeto Invalido!'
+  invalidEnchant: '&cEncantamiento invalido!'
+  success: '&aEncantamiento exitosamente aplicado!'
+annoucer:
+  success: '&6Mejora Exitosa: %player% Obtuvo %item%.'
+  failed: '&cMejora Falló: %player% ha degradado %item%.'
+  destroyed: '&cMejora fallida: %player% Destruyó %item%.'
+enhance:
+  successRate: '&b tasa de exito %chance%%.'
+  itemInvalid: '&cÉste objeto no puede ser mejorado!'
+  itemMax: '&6Nivel maximo de mejora alcanzado.'
+  enhanceSuccess: '&6La mejora fue exitosa!'
+  forceEnhanceSuccess: '&6La mejora forzada fue exitosa!'
+  enhanceFailed: '&cMejora Fallida!'
+  downgraded: '&4Objeto Degradado!'
+  destroyed: '&4Objeto Destruido!'
+  currentFailstack: '&bFailstack: '
+lore:
+  untradeableLore: '&7[&6Keep-On-Death&7]&7[&4Character Bound&7]&f'
+  tradeableLore: '&8[&6Keep-on-death&8]&8[&2Trade Available&8]&f'
+messages:
+  noItemInHand: '&4Ningún artículo a mano!'
+  alreadyuntradeable: '&4Personaje actualmente unido!'
+  alreadytradeable: '&4Intercabio disponible!'
+  alreadyunbound: '&4Actualmente Sin unir!'
+  madeuntradeable: '&2It is now character bound!'
+  madetradeable: '&2Ahora está disponible el comercio!'
+  madeunbound: '&2Ahora está sin unir!'
+  noDrop: '&4Éste objeto no puede tirarse!'
+  noStorage: '&4Éste objeto no puede almacenarse!'
+save:
+  createFailstack: '&6You created &9Advice of Valks+%failstack%'
+  noFailstack: '&cYou don''t have any &9Advice of Valks!'
+  failstackTitle: '&e-- Saved &9Advice of Valks&e %page% --'
+  listing: '&e%NUMBER% &f- &c%FAILSTACK%'
+help:
+  help: '&aview help.'
+  menu: '&aAbrir menú de mejora.'
+  reload: '&aRecargar plugin.'
+  version: '&aVerificar version.'
+  inventory: '&aVer elementos que ha recogido.'
+  add: |-
+    &agive a player an enhancing items.
+    0 = &6Black Stone (&3Weapon&6)&a, 1 = &6Black Stone (&7Armor&6)&a, 2 = &6Concentrated Magical Black Stone (&3Weapon&6)&a, 3 = &6Concentrated Magical Black Stone (&7Armor&6)
+  debug: '&acollect debugging information for developer to fix issues.'
+  item: '&aEditar un elemento en la mano.'
+  enchantment: '&aEditar encantamiento de un objeto en mano.'
+  set: '&aSet personal item grinding multiplier.'
+menu:
+  gui:
+    title: '&6Enhancement'
+    enhance: '&6Enhance'
+    force: '&cForce'
+    stats: '&bInfo'
+    remove: '&7Deselect'
+    store: '&fSave Failstack'
+    back: '&9Go Back'
+    next: '&9Go Next'
+    reblath: '&9Reblath Failstacking'
+    grind: '&9Grind'
+    cancel: '&4CANCEL'
+  lore:
+    store1: '&fUse Blacksmith’s Secret Book'
+    store2: '&fto store failstacks by creating &9Advice of Valks'
+    force1: '&cForce guarantees a successful enhancement'
+    force2: '&cNeeded %ITEM% x%COUNT%'
+    remove: '&7Remove current enhancing item'
+    stats1: '&bEnhancing is the act of increasing the stats of your items.'
+    stats2: '&bFailstacks increase the chance of a successful enhancement attempt.'
+    ifFail: '&6Enhancement could &9fail&6'
+    ifSuccess: '&6Enhancement could succeed'
+    ifDowngrade: '&6Item will be &cdowngraded&6 if failed'
+    ifDestroy: '&6Item will be &4destroyed&6 if failed'
+    skip: '&6Right click to &cskip &6animation.'
+    back: '&9Click to go back to previous page.'
+    next: '&9Click to go to next page.'
+    cancel: '&4Cancel this enhancement.'
+  leftInfo: '&6Left click an item to select to act.'
+  rightInfo: '&6Right click an item to take it out from your virtual inventory.'
+  leftAdviceInfo: '&6Left click an advice to use it.'
+item:
+  gui: '&6Your collections of black stones'
+  gui1: '&6Click me to open your backpack'
+  title: '&3You Have Collected:'
+  listing: '&e%ITEM% &f: &c%COUNT%'
+  '0': '&6Black Stone (&3Weapon&6)'
+  '1': '&6Black Stone (&7Armor&6)'
+  '2': '&6Concentrated Magical Black Stone (&3Weapon&6)'
+  '3': '&6Concentrated Magical Black Stone (&7Armor&6)'
+  '4': '&6Cron Stone'
+  valks: '&9Advice of Valks'
+  get: '&aYou got a %ITEM%'
+  noItem: '&cYou don''t have enough &6%STONE%&c to perform an enhancement'
+  invalid: '&cYou cannot enhance this item.'
+  use: '&aYou used a %ITEM%.'
+valks:
+  gui: '&9Owned Advice of Valks'
+  noAdvice: '&cYou do not own any &9Advice of Valks&c.'
+  hasFailstack: '&cYou can''t use &9Advice of Valks &cif you have failstacks.'
+  used: '&aYou used an &9Advice of Valks &aand Level &d%LEVEL% &afailstacks is applied.'
+example:
+  command:
+    add:
+      guide: /enhance add <player> <stone> <number>
+      stone: 0 = &6Black Stone (&3Weapon&6), 1 = &6Black Stone (&7Armor&6), 2 = &6Concentrated
+        Magical Black Stone (&3Weapon&6), 3 = &6Concentrated Magical Black Stone (&7Armor&6)
+add:
+  successful: '&aYou gave %player% %number% of %stone%.'
+reform:
+  gui:
+    title: Item Reform
+  reform: Reform Item
+gui:
+  missingItem: Please select an item to operate
+  noItem: You do not have sufficient item
+  addFailstack: You got %level% level of failstack. You now have %size% failstacks.
+  resetFailstack: You lost your %level% failstacks.
+icon:
+  gear1: '&9Gear enhancement mode.'
+  gear2: '&9Click your weapons and armors to begin enhancement.'
+  tool1: '&9Tool enhancement mode.'
+  tool2: '&9Click your tools to begin enhancement.'
+set:
+  success: You have set your grind multiplier to x%leverage%.
+  failed: Your grind multiplier needs to be x2 or greater.
+grind:
+  failed: You grind your stone and it shattered.
+  success: You grind your stone and you got x%amount% stones that you grind.
+  info1: '&9Grind x1 stone has a chance of yielding x%amount% of same stones.'
+  info2: '&9Use &6/enhance set { multiplier } &9to set your multiplier'
+reblath:
+  info1: '&9Use x1 stone to gain 1 failstack.'
+  info2: '&9But you have 17.5% chance to lose your current failstack.'
+materialize:
+  info1: '&6Right Click to use this bundle.'
+  info2: '&6You will get x%amount% %item%.'
+  success: '&6You received x%amount% %item% from bundle.'
+  advice1: '&6You will get a level %level% Advice of Valks.'
+  adviceSucess: '&6You received a level %level% Advice of Valks.'
+  inventoryFull: '&cFailed: Your inventory is full.'
+  notEnoughItem: '&cFailed: Not enough items.'
+vendor:
+  gui: '&8Night Vendor'
+anvil:
+  disabled: '&cAnvil is disabled.'
+  repairDisabled: '&cAnvil repair is disabled.'
+  renameDisabled: '&cAnvil rename is disabled.'
+enchantments:
+  lumberjack: Lumberjack
+  pumpking: Pumpking
+  rider: Rider
+  tamer: Tamer
+  touch: Touch
+  explosive: Explosive
+  smelt: Smelt
+  plow: Plow
+  shearer: Shearer
+  reversal: Reversal
+  rekt: Rekt
+  siphon: Siphon
+  strength: Strength
+  endless: Endless
+  speed: Speed
+  batvision: Batvision
+  molten: Molten
+  invisible: Invisible
+  repel: Repel
+  factory: Factory
+  execute: Execute
+  launch: Launch
+  purge: Purge
+  feather: Feather
+  shield: Shield
+  divine: Divine
+  riftslayer: Riftslayer
+  paralyze: Paralyze
+  phoenix: Phoenix
+  pyromaniac: Pyromaniac
+  aegis: Aegis
+  turmoil: Turmoil
+  lifesteal: Lifesteal
+  cure: Cure
+  reborn: Reborn
+  dodge: Dodge
+  suicide: Suicide
+  crits: Crits
+  reinforced: Reinforced
+  spiked: Spiked
+  assassin: Assassin
+  saturation: Saturation
+  shadowstep: Shadowstep
+  hex: Hex
+  mischief: Mischief
+  blessed: Blessed
+  curse: Curse
+  eyepatch: Eyepatch
+  battlecry: Battlecry
+  smite: Smite
+  corruption: Corruption
+  flame: Flame
+  petrify: Petrify
+  vitality: Vitality
+  frosty: Frosty
+  crushing: Crushing
+  jump: Jump
+  immolation: Immolation
+  stealth: Stealth
+  plunder: Plunder
+  demonic: Demonic
+  haste: Haste
+  swimmer: Swimmer
+descriptions:
+  lumberjack: Chops the whole tree in one click
+  pumpking: Harvests all the pumpkin and melon.
+  rider: Tames a horse with saddle when hit while wearing armour with this enchant.
+  tamer: By hitting the wolves, they will be tamed
+  touch: You can harvest mob spawners.
+  explosive: When destroying a block that your tool was meant for you cause an explosion
+    that breaks similar blocks arround that.
+  smelt: Auto Smelts the blocks you break
+  plow: Hoes a bigger area
+  shearer: When left clicking the item having this enchant in the air, all Sheep within
+    the radius will be sheared
+  reversal: You have chance to reverse the damage towards your opponent who damaged
+    you
+  rekt: You give 2x damage to mobs
+  siphon: You have chance to get large amount of life steal from PvE (Mobs).
+  strength: Gives infinite Strength
+  endless: Item with this enchantment will never be broken
+  speed: Gives you infinite speed boost
+  batvision: Gives you infinite night vision
+  molten: Gives infinite Fire Resistant
+  invisible: Gives you infinite invisibility
+  repel: While getting damage, you have chance to give a high knockback to your enemy
+  factory: Auto makes the block of items
+  execute: More critical hits and a higher chance to do 2x damage whilst sneaking
+  launch: A chance to launch the enemy up in the sky!
+  purge: A chance to call down a strike of lightning upon your enemy, removing all
+    positive potion effects they have and damages them
+  feather: No fall damage when you wear any armour part having this enchantment
+  shield: Gives infinite health boost.
+  divine: A chance to heal you relative to the damage you inflict upon your enemy
+    without taking their health
+  riftslayer: You deal up to 3x more damage to mobs
+  paralyze: You have a chance to give your opponent Mining Fatigue effect for few
+    seconds
+  phoenix: Gives you infinite regeneration
+  pyromaniac: Fire ticks have a chance to heal you instead of doing damage
+  aegis: When blocking, player has a chance  to regain health
+  turmoil: Has a chance to give enemies a nausea potion debuff
+  lifesteal: When attacking another player you have a chance of gaining some of your
+    health back
+  cure: Gives you infinite regen
+  reborn: When you kill a player, you will get Absorption and Regeneration potion
+    effect for limited time
+  dodge: Chance of evading damage
+  suicide: A chance to create an explosion when the player dies
+  crits: You will deal double damage
+  reinforced: You get damage resistance
+  spiked: Gives a thorns like effect but a bit more than default
+  assassin: Player has a chance of inflicting a poison effect on the victim
+  saturation: Gives you infinite saturation
+  shadowstep: You have a chance to get teleported behind the player who damaged you
+  hex: A chance of inflicting blindness on your victim
+  mischief: Inflicts nausea to your opponent
+  blessed: Restores the wearers health and hunger while walking and running
+  curse: Upon hitting a target they will receive the wither damage debuff
+  eyepatch: Immune to blindness
+  battlecry: Chance to remove negative debuffs from yourself while you fight
+  smite: A chance to call down a bolt of lightning, removing any positive buffs the
+    enemy has
+  corruption: Has a chance to give weakness effect to enemy
+  flame: Has a chance to ignite people that attack you
+  petrify: Has a chance to give slowness effect to your enemy
+  vitality: Gives you extra hearts
+  frosty: Has a chance of inflicting a slow effect on your victim.
+  crushing: A chance to deal up to 3x damage
+  jump: Gives you infinite jump boost
+  immolation: When you sneak, you have chance to set nearby players on fire
+  stealth: When you sneak, nearby enemies aiming near you have a chance to get blindness
+  plunder: More XP from entities
+  demonic: Has a chance of giving the wither effect to your attacker
+  haste: Gives you Haste Potion Effect
+  swimmer: Gives you infinite water breathing
+update:
+  outdated: '&cEnchantmentsEnhance is OUTDATED!'
+  updateToDate: '&aEnchantments Enhance is UP-TO-DATE!'
